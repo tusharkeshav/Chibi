@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------------------------------------------------
+   ICONIC GAMING THEME TOKEN SYSTEM
+   ------------------------------------------------------------- */
+
+/* Default: Discord Studio */
+:root, :root[data-theme="discord"] {
+  --bg-base: #0e1015;
+  --bg-sidebar: #13151b;
+  --bg-surface: #181b22;
+  --bg-hover: #20242e;
+  --bg-active: #282d3a;
+  --bg-input: #111318;
+  --border: #262933;
+  --brand: #5865f2;
+  --brand-hover: #4752c4;
+  --brand-text: #ffffff;
+  --brand-glow: rgba(88, 101, 242, 0.25);
+  --accent-secondary: #57f287;
+  --theme-bg-url: url('/backgrounds/discord.jpg');
+}
+
+/* 1. Valorant Protocol (Radiant Red & Gunmetal) */
+:root[data-theme="valorant"] {
+  --bg-base: #0b1117;
+  --bg-sidebar: #0f1923;
+  --bg-surface: #17232d;
+  --bg-hover: #202e3b;
+  --bg-active: #2a3c4c;
+  --bg-input: #0a1017;
+  --border: #2c3a47;
+  --brand: #ff4655;
+  --brand-hover: #e03241;
+  --brand-text: #ffffff;
+  --brand-glow: rgba(255, 70, 85, 0.28);
+  --accent-secondary: #00f5d4;
+  --theme-bg-url: url('/backgrounds/valorant.jpg');
+}
+
+/* 2. NFS Heat / Nitro (Acid Nitrous & Speedway Asphalt) */
+:root[data-theme="nfs"] {
+  --bg-base: #060608;
+  --bg-sidebar: #0a0a0d;
+  --bg-surface: #121217;
+  --bg-hover: #1b1b22;
+  --bg-active: #252530;
+  --bg-input: #09090c;
+  --border: #262633;
+  --brand: #d9f800;
+  --brand-hover: #c4e000;
+  --brand-text: #000000;
+  --brand-glow: rgba(217, 248, 0, 0.25);
+  --accent-secondary: #00ffe0;
+  --theme-bg-url: url('/backgrounds/nfs.jpg');
+}
+
+/* 3. GTA Vice / VI Sunset (Vice Neon Pink & Ocean Drive Cyan) */
+:root[data-theme="gta"] {
+  --bg-base: #0a0712;
+  --bg-sidebar: #0f0b1a;
+  --bg-surface: #171126;
+  --bg-hover: #221838;
+  --bg-active: #2e214a;
+  --bg-input: #0b0714;
+  --border: #2d1f47;
+  --brand: #ff2a85;
+  --brand-hover: #e61972;
+  --brand-text: #ffffff;
+  --brand-glow: rgba(255, 42, 133, 0.3);
+  --accent-secondary: #00e5ff;
+  --theme-bg-url: url('/backgrounds/gta.jpg');
+}
+
+/* 4. Cyberpunk 2077 (Electric Cyan & Arasaka Red) */
+:root[data-theme="cyberpunk"] {
+  --bg-base: #050508;
+  --bg-sidebar: #0a0a10;
+  --bg-surface: #10101c;
+  --bg-hover: #19192c;
+  --bg-active: #22223c;
+  --bg-input: #07070d;
+  --border: #232238;
+  --brand: #00f0ff;
+  --brand-hover: #00cce0;
+  --brand-text: #000000;
+  --brand-glow: rgba(0, 240, 255, 0.3);
+  --accent-secondary: #ff0055;
+  --theme-bg-url: url('/backgrounds/cyberpunk.jpg');
+}
+
+/* 5. Linear Dark (Minimalist Indigo on Pitch Black) */
+:root[data-theme="linear"] {
+  --bg-base: #08090a;
+  --bg-sidebar: #0d0e10;
+  --bg-surface: #141619;
+  --bg-hover: #1c1e22;
+  --bg-active: #25282e;
+  --bg-input: #0a0b0d;
+  --border: #222429;
+  --brand: #6366f1;
+  --brand-hover: #4f46e5;
+  --brand-text: #ffffff;
+  --brand-glow: rgba(99, 102, 241, 0.25);
+  --accent-secondary: #a5b4fc;
+  --theme-bg-url: url('/backgrounds/linear.jpg');
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-hover);
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  transition: transform 0.1s ease;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
